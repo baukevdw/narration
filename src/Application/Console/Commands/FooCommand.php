@@ -12,13 +12,13 @@ final class FooCommand
     /**
      * Handle the given input.
      *
-     * @param  \Symfony\Component\Console\Input\InputInterface  $input
+     * @param  \Symfony\Component\Console\Input\InputInterface   $input
      * @param  \Symfony\Component\Console\Output\OutputInterface $output
      *
      * @return void
      */
     public function __invoke(InputInterface $input, OutputInterface $output): void
     {
-        // ...
+        $output->write('bar', true);
     }
 }

@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace Application\Injectors;
 
-use Domain\Contracts\Repositories\TaskRepositoryInterface;
-use Infrastructure\Persistence\Repositories\TaskRepository;
-use Psr\Container\ContainerInterface;
+use Domain\Contracts\Repositories\TodoRepository;
+use Domain\Contracts\Repositories\UserRepository;
+use Infrastructure\Persistence\Repositories\DatabaseTodoRepository;
+use Infrastructure\Persistence\Repositories\DatabaseUserRepository;
 
 final class Repositories
 {
@@ -18,7 +19,8 @@ final class Repositories
     public function __invoke(): array
     {
         return [
-            TaskRepositoryInterface::class => TaskRepository::class,
+            UserRepository::class => DatabaseUserRepository::class,
+            TodoRepository::class => DatabaseTodoRepository::class,
         ];
     }
 }

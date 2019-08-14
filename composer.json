@@ -1,7 +1,11 @@
 {
     "name": "narration/narration",
     "description": "The Narration Framework.",
-    "keywords": ["narration", "php", "framework"],
+    "keywords": [
+        "narration",
+        "php",
+        "framework"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -11,9 +15,11 @@
     ],
     "require": {
         "php": "^7.2",
+        "ext-pdo": "*",
         "narration/console": "dev-master",
         "narration/container": "dev-master",
-        "narration/http": "dev-master"
+        "narration/http": "dev-master",
+        "neat/object": "^0.9.2"
     },
     "require-dev": {
         "narration/testing": "dev-master"
